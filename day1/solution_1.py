@@ -1,5 +1,5 @@
 
-data = open("/Users/anushkajalori/Desktop/aoc/day/day1/input.txt", "r")
+data = open("day1/input.txt", "r")
 real_data = data.readlines()
 l1=[]
 l2=[]

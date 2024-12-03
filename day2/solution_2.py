@@ -12,7 +12,7 @@ def idek(x, chance):
         index+=1
     return 1
 
-data = open("/Users/anushkajalori/Desktop/aoc/day/day2/input.txt", "r")
+data = open("day2/input.txt", "r")
 real_data = data.readlines()
 count = 0
 for i in real_data:

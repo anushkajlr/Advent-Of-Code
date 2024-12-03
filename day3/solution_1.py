@@ -1,5 +1,5 @@
 import re
-data = open("/Users/anushkajalori/Desktop/aoc/day/day3/input.txt").read().replace("\n", "")
+data = open("day3/input.txt").read().replace("\n", "")
 res = 0
 pattern = r"^mul\((\d{1,3}),(\d{1,3})\)"
 index = 0

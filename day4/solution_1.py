@@ -27,7 +27,7 @@ for d in range(-len(data) + 1, len(data[0])):
             count+=1
         if new_line[index:index+4] == list('XMAS'):
             count+=1
-for d in range(len(data) + len(data[0]) - 1):  # Covers all secondary diagonals
+for d in range(len(data) + len(data[0]) - 1): 
     diagonal = [data[i][d - i] for i in range(max(0, d - len(data[0]) + 1), min(len(data), d + 1))]
     new_line = diagonal[::-1]
     for index in range(0,len(diagonal)):

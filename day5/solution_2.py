@@ -6,6 +6,7 @@ data =  open("day5/input.txt", "r").readlines()
 
 rules = {}
 count = 0
+swap = 0
 start_test = False
 for line in data:
     test = 0
@@ -17,10 +18,8 @@ for line in data:
             while j < len(line):
                 if line[j] in rules and line[i] in rules[line[j]]:
                     test = 1
-                    temp = line[j]
-                    line[j] = line[i]
-                    line[i] = temp
-                    j = i+1
+                    line.insert(i, line[j])
+                    line.pop(j+1)
                 j+=1
             i+=1
         if test:

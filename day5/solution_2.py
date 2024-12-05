@@ -11,13 +11,18 @@ for line in data:
     test = 0
     if start_test:
         line = line.strip("\n").split(",")
-        for i in range(len(line)-1):
-            for j in range(i+1, len(line)):
+        i = 0
+        while i < len(line)-1:
+            j = i+1
+            while j < len(line):
                 if line[j] in rules and line[i] in rules[line[j]]:
                     test = 1
                     temp = line[j]
                     line[j] = line[i]
                     line[i] = temp
+                    j = i+1
+                j+=1
+            i+=1
         if test:
             count += int(line[int((len(line)-1)/2)])
     else:
@@ -33,4 +38,3 @@ for line in data:
             else:
                 rules[a] = [b]
 print(count)
-
